@@ -14,7 +14,7 @@ public class EncriptDecriptTest {
         encriptDecript = new EncriptDecript(offset);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class, timeout = 1000)
     public void encryptDecript() throws Exception {
         String expected = null;
         encriptDecript.encrypt(expected);
