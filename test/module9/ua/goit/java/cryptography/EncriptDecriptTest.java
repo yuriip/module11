@@ -15,28 +15,42 @@ public class EncriptDecriptTest {
     }
 
     @Test(timeout = 1000, expected = IllegalArgumentException.class)
-    public void encryptDecriptException() throws Exception {
-        String expected = null;
-        encriptDecript.encrypt(expected);
+    public void encryptNull() throws Exception {
+        encriptDecript.encrypt(null);
+    }
 
-        expected = "";
-        encriptDecript.encrypt(expected);
+    @Test(timeout = 1000, expected = IllegalArgumentException.class)
+    public void encryptEmpty() throws Exception {
+        encriptDecript.encrypt("");
+    }
+
+
+    @Test(timeout = 1000, expected = IllegalArgumentException.class)
+    public void decryptNull() throws Exception {
+        encriptDecript.decrypt(null);
+    }
+
+    @Test(timeout = 1000, expected = IllegalArgumentException.class)
+    public void decryptEmpty() throws Exception {
+        encriptDecript.decrypt("");
     }
 
     @Test(timeout = 1000)
     public void enctipt() throws Exception {
-        String expected = "Java is a general-purpose computer programming language.";
+        String expected = "Of{f%nx%f%ljsjwfq2uzwutxj%htruzyjw%uwtlwfrrnsl%qfslzflj3";
+        String textDectipt = "Java is a general-purpose computer programming language.";
 
-        String result = encriptDecript.encrypt(expected);
-        assertNotEquals(expected, result);
+        String result = encriptDecript.encrypt(textDectipt);
+        System.out.println(result);
+        assertEquals(expected, result);
     }
 
     @Test(timeout = 1000)
     public void dectipt() throws Exception {
         String expected = "Java is a general-purpose computer programming language.";
-        String expectedEncript = encriptDecript.encrypt(expected);
+        String textEncript = "Of{f%nx%f%ljsjwfq2uzwutxj%htruzyjw%uwtlwfrrnsl%qfslzflj3";
 
-        String result = encriptDecript.decrypt(expectedEncript);
+        String result = encriptDecript.decrypt(textEncript);
         assertEquals(expected, result);
     }
 }
