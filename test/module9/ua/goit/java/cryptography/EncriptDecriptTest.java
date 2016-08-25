@@ -36,7 +36,7 @@ public class EncriptDecriptTest {
     }
 
     @Test(timeout = 1000)
-    public void enctipt() throws Exception {
+    public void encrypt() throws Exception {
         String expected = "Of{f%nx%f%ljsjwfq2uzwutxj%htruzyjw%uwtlwfrrnsl%qfslzflj3";
         String textDectipt = "Java is a general-purpose computer programming language.";
 
@@ -45,7 +45,7 @@ public class EncriptDecriptTest {
     }
 
     @Test(timeout = 1000)
-    public void dectipt() throws Exception {
+    public void decrypt() throws Exception {
         String expected = "Java is a general-purpose computer programming language.";
         String textEncript = "Of{f%nx%f%ljsjwfq2uzwutxj%htruzyjw%uwtlwfrrnsl%qfslzflj3";
 
