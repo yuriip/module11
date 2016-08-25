@@ -41,7 +41,6 @@ public class EncriptDecriptTest {
         String textDectipt = "Java is a general-purpose computer programming language.";
 
         String result = encriptDecript.encrypt(textDectipt);
-        System.out.println(result);
         assertEquals(expected, result);
     }
 
