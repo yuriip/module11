@@ -17,9 +17,6 @@ public class MathMenu {
     public static void processSortArray(int[] array) {
         array = Math.sortArray(array);
         System.out.println("Сортировка массива по алгоритму пузырьковой сортировки выполнена");
-
-System.out.println(Arrays.toString(array));
-
         for (int a : array) {
             System.out.println("a = " + a);
         }

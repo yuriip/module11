@@ -17,8 +17,6 @@ public class MainMenu {
 
         int[] arrayCopy = array.clone();
 
-System.out.println(Arrays.toString(array));
-
         while (true) {
             System.out.println("Исходный массив целих чисел:");
             for (int a : array) {
