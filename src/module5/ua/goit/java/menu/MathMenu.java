@@ -2,6 +2,8 @@ package module5.ua.goit.java.menu;
 
 import module5.ua.goit.java.math.Math;
 
+import java.util.Arrays;
+
 public class MathMenu {
     public static void processFindMaxValue(int[] array) {
 
@@ -15,6 +17,9 @@ public class MathMenu {
     public static void processSortArray(int[] array) {
         array = Math.sortArray(array);
         System.out.println("Сортировка массива по алгоритму пузырьковой сортировки выполнена");
+
+System.out.println(Arrays.toString(array));
+
         for (int a : array) {
             System.out.println("a = " + a);
         }

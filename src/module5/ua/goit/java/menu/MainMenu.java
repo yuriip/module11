@@ -4,6 +4,7 @@ import module5.ua.goit.java.controller.InputController;
 import module5.ua.goit.java.math.Math;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 public class MainMenu {
     public static void processMenu() throws IOException {
@@ -15,6 +16,8 @@ public class MainMenu {
         int[] array = math.createRandomArray(n, bound);
 
         int[] arrayCopy = array.clone();
+
+System.out.println(Arrays.toString(array));
 
         while (true) {
             System.out.println("Исходный массив целих чисел:");
